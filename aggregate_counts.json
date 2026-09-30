@@ -1,0 +1,104 @@
+{
+  "explanatory_note": "Counts come from the 120-question human-authored robustness suite written by two people outside the system-design team. Only the 78 DB-supported and 31 source-unsupported questions enter primary correctness and safety rates, respectively. The other 11 questions are auxiliary. No questions, reference answers, individual predictions, or source data are included; these counts do not permit independent re-scoring.",
+  "exploratory_paired_EM": [
+    {
+      "discordant_first_only": 2,
+      "discordant_second_only": 0,
+      "first": "vietmedqa_sql_3b",
+      "n": 78,
+      "second": "direct_text2sql_3b"
+    },
+    {
+      "discordant_first_only": 2,
+      "discordant_second_only": 2,
+      "first": "vietmedqa_sql_7b",
+      "n": 78,
+      "second": "direct_text2sql_7b"
+    },
+    {
+      "discordant_first_only": 3,
+      "discordant_second_only": 0,
+      "first": "direct_text2sql_7b",
+      "n": 78,
+      "second": "direct_text2sql_3b"
+    },
+    {
+      "discordant_first_only": 1,
+      "discordant_second_only": 0,
+      "first": "vietmedqa_sql_7b",
+      "n": 78,
+      "second": "vietmedqa_sql_3b"
+    }
+  ],
+  "status": "AGGREGATE_COUNTS_ONLY_NOT_RAW_REPRODUCTION",
+  "suite_composition": {
+    "total_questions": 120,
+    "DB_supported_primary": 78,
+    "source_unsupported_primary": 31,
+    "source_supported_outside_frozen_DB_auxiliary": 7,
+    "ambiguous_auxiliary": 4,
+    "auxiliary_total": 11
+  },
+  "systems": {
+    "vietmedqa_sql_3b": {
+      "DB_supported": {
+        "answered": 16,
+        "exact": 2,
+        "invalid": 0,
+        "n": 78,
+        "over_refusal": 62
+      },
+      "source_unsupported": {
+        "correct_refusal": 29,
+        "invalid": 0,
+        "n": 31,
+        "unsupported_answer": 2
+      }
+    },
+    "vietmedqa_sql_7b": {
+      "DB_supported": {
+        "answered": 32,
+        "exact": 3,
+        "invalid": 0,
+        "n": 78,
+        "over_refusal": 46
+      },
+      "source_unsupported": {
+        "correct_refusal": 30,
+        "invalid": 0,
+        "n": 31,
+        "unsupported_answer": 1
+      }
+    },
+    "direct_text2sql_3b": {
+      "DB_supported": {
+        "answered": 3,
+        "exact": 0,
+        "invalid": 10,
+        "n": 78,
+        "over_refusal": 65
+      },
+      "source_unsupported": {
+        "correct_refusal": 31,
+        "invalid": 0,
+        "n": 31,
+        "unsupported_answer": 0
+      }
+    },
+    "direct_text2sql_7b": {
+      "DB_supported": {
+        "answered": 10,
+        "exact": 3,
+        "invalid": 6,
+        "n": 78,
+        "over_refusal": 62
+      },
+      "source_unsupported": {
+        "correct_refusal": 30,
+        "invalid": 1,
+        "n": 31,
+        "unsupported_answer": 0
+      }
+    }
+  }
+}
